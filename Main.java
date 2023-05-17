@@ -35,6 +35,7 @@ class Main {
               System.out.println(current.ToString());
               
             }
+            
           }
             break;
             case 0:{
