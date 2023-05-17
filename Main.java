@@ -19,6 +19,7 @@ class Main {
         System.out.println("Co chcesz zrobic?");
         System.out.println("1. Dodaj studenta");
         System.out.println("2. Wyświetl liste studentów");
+        System.out.println("0. Zamknij program");
         int x = scan.nextInt();scan.nextLine();
         switch(x){
           case 1:{
@@ -28,10 +29,12 @@ class Main {
             String surname = scan.nextLine();
             System.out.println("Wprowadź wiek:");
             int age = scan.nextInt();
-            s.addStudent(new Student(name, surname, age));
+            System.out.println("Wprowadź date urodzenia (MM/DD/YY):");
+            String date = scan.next();
+            s.addStudent(new Student(name, surname, age, date));
+            
           } 
 
-            
             break;
           case 2:{
             var students = s.getStudents();
@@ -39,6 +42,7 @@ class Main {
               System.out.println(current.ToString());
               
             }
+            
             
           }
             break;
