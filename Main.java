@@ -24,10 +24,14 @@ class Main {
           case 1:{
             System.out.println("Wprowadź imie:");
             String name = scan.nextLine();
+            System.out.println("Wprowadź nazwisko:");
+            String surname = scan.nextLine();
             System.out.println("Wprowadź wiek:");
             int age = scan.nextInt();
-            s.addStudent(new Student(name, age));
-          }
+            s.addStudent(new Student(name, surname, age));
+          } 
+
+            
             break;
           case 2:{
             var students = s.getStudents();
